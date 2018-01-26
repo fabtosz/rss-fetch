@@ -4,10 +4,10 @@ namespace BartoszFabianski\Exceptions;
 
 use Exception;
 
-class EmptyFeedException extends Exception {
+class InvalidRSSChannelException extends Exception {
 
 	public function __construct($message = null) {
-		$message = $message ?: 'Returned empty feed or given URL is invalid.';
+		$message = $message ?: 'Given RSS channel URL is invalid.';
 		parent::__construct($message);
 	}
 }

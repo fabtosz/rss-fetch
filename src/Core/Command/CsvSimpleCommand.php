@@ -15,9 +15,9 @@ class CsvSimpleCommand extends Command {
 
     protected function configure(){
         $this->setName("csv:simple")
-                ->setDescription("Downloads .xml file from given URL.")
-                ->addArgument('URL', InputArgument::REQUIRED, 'Type URL to fetch RSS feed.')
-                ->addArgument('PATH', InputArgument::REQUIRED, 'Path to .csv file. If file doesnt');
+                ->setDescription("Fetch RSS channel data from given URL and save it to .csv file in given path. If file exists content will be overwritten.")
+                ->addArgument('URL', InputArgument::REQUIRED, 'URL to fetch RSS feed.')
+                ->addArgument('PATH', InputArgument::REQUIRED, 'Path to .csv file.');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output){
